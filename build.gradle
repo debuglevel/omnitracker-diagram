@@ -1,25 +1,71 @@
+buildscript {
+    ext.kotlin_version = '1.2.70'
+
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
+    id 'org.jetbrains.kotlin.jvm' version "1.2.70"
+
+    // create start scripts
+    // is executed on "build" task but not on e.g. "jar" task
+    id 'application'
+
+    // bundle all dependencies into one fat shadowed jar
+    // (gets automatically triggered when application plugin is present)
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.6"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.6"
 }
 
 group 'de.debuglevel.omnitracker2erd'
 version '0.0.1-SNAPSHOT'
 
-sourceCompatibility = 1.8
+// application plugin configuration
+applicationName = "omnitracker2erd"
+mainClassName = "de.debuglevel.omnitracker2erd.CliKt"
+
+// for Java code
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    // Tests
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-params:5.2.0'
+    testCompile 'org.assertj:assertj-core:3.10.0'
+
+    // Logging
+    // see http://saltnlight5.blogspot.com/2013/08/how-to-configure-slf4j-with-different.html for a quick introduction to slf4j
+    compile 'io.github.microutils:kotlin-logging:1.4.9'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.slf4j:slf4j-simple:1.7.5'
 }
 
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+// jar configuration is still needed (despite of application plugin) to add Manifest to traditional jar
+jar {
+    manifest {
+        attributes 'Implementation-Title': applicationName,
+                'Implementation-Version': version,
+                'Main-Class': mainClassName
+    }
 }
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
+

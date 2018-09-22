@@ -2,14 +2,14 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/test" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.2.70/17bdfaa19afad44a641a778a1cacc53b0e95dddc/kotlin-stdlib-jdk8-1.2.70.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/io.github.microutils/kotlin-logging/1.4.9/517de98b6f8fdf6cc757eb7e911016f3ec0b7ac5/kotlin-logging-1.4.9.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.5/4a950c50bbc67fdbc908190dc8e25d7a0251f74a/slf4j-simple-1.7.5.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/d70083080bf3400c181562919cb03bf7588104e1/junit-jupiter-params-5.2.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/9cd901df48d88d8e605a6ccb2c3f140c92db6bf2/junit-jupiter-api-5.2.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.10.0/4898fc7b9a2f7f8457bd380f917b08416df313f7/assertj-core-3.10.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.2.70/9318bb9dadaa56534ac8b0728a1ffa2bd0e48b28/kotlin-stdlib-jdk7-1.2.70.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.70/b5b9449f73ce7bf312e89a7560cb3c209a0fa13e/kotlin-stdlib-1.2.70.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/dbce1d822d3dc6c61703b340cd79018518685451/junit-platform-commons-1.2.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/c8e2a3e3bc7f3e4bb5075306452db5290f9b117a/opentest4j-1.1.0.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.70/6ea722d7d0b9451293e739076ddb6a4108d57b6b/kotlin-stdlib-common-1.2.70.jar;C:/Users/marck/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="omnitracker2erd" />
-          <option name="jvmTarget" value="1.8" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
           <option name="languageVersion" value="1.2" />
