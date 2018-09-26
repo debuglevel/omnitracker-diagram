@@ -41,11 +41,20 @@ sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
 repositories {
+    mavenLocal()
     jcenter()
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    compile "de.debuglevel.omnitrackerdatabasebinding:omnitrackerdatabasebinding:0.0.1-SNAPSHOT"
+
+    // PlantUML
+    compile "net.sourceforge.plantuml:plantuml:8059"
+
+    // GraphViz
+    compile 'guru.nidi:graphviz-java:0.5.4'
 
     // Tests
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'

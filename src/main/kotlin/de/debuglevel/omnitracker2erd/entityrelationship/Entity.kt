@@ -1,8 +1,9 @@
 package de.debuglevel.omnitracker2erd.entityrelationship
 
+import de.debuglevel.omnitrackerdatabasebinding.models.Folder
 import java.util.*
 
-data class Entity(val name: String, val attributes: List<Attribute>) {
+data class Entity(val name: String, val folder: Folder, val attributes: List<Attribute>) {
     //val attributes = mutableListOf<Attribute>()
 
     val color: String

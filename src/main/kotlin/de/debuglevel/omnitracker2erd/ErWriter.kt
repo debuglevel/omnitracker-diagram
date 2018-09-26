@@ -46,6 +46,7 @@ class ErWriter(val entities: List<Entity>, val relationships: List<Relationship>
             Cardinality.OneOrMore -> "+"
             Cardinality.ZeroOrOne -> "?"
             Cardinality.ZeroOrMore -> "*"
+            else -> "???"
         }
         output += "--"
         output += when (relationship.leftHasThatManyRights){
@@ -53,6 +54,7 @@ class ErWriter(val entities: List<Entity>, val relationships: List<Relationship>
             Cardinality.OneOrMore -> "+"
             Cardinality.ZeroOrOne -> "?"
             Cardinality.ZeroOrMore -> "*"
+            else -> "???"
         }
         output += " ${relationship.right.name}"
         output += if (relationship.label != null) " {label: \"${relationship.label}\"}" else ""
